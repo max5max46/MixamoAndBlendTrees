@@ -25,6 +25,7 @@ public class PlayerLocomotionHandler : MonoBehaviour
     public float rotationSpeed = 15f;
     public float gravity = -30f; // Gravity value to apply to the player
     public float jumpHeight = 3.0f; // Jump height
+    public static float moveSpeed;
 
     private Vector3 moveDirection;
     private Vector3 velocity;
@@ -122,7 +123,6 @@ public class PlayerLocomotionHandler : MonoBehaviour
     {
         // Calculate the player's velocity magnitude, including both movement and vertical velocity (gravity/jumping)
         playerVelocity = characterController.velocity.magnitude;
+        moveSpeed = playerVelocity;
     }
-
-
 }
